@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>1.HTML Forms</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="ณัฐพล"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="นามเกตุ"><br><br>
+  <input type="submit" value="ส่ง">
+</form> 
+
+<p>หากคุณคลิกปุ่ม "ส่ง" ข้อมูลแบบฟอร์มจะถูกส่งไปยังหน้าที่เรียกว่า "/action_page.php".</p>
+<h2>1.1.Text input fields</h2>
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="ณัฐพล"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="นามเกตุ">
+</form>
+
+<p>นายณัฐพล นามเกตุ 1910711102004.</p>
+
+<h2>1.2.Radio Buttons</h2>
+
+<form>
+  <input type="radio" id="green" name="gender" value="green">
+  <label for="green">Green</label><br>
+  <input type="radio" id="red" name="gender" value="red">
+  <label for="red">Red</label><br>
+  <input type="radio" id="orange" name="gender" value="orange">
+  <label for="orange">Orange</label>
+</form> 
+
+<h2>1.3.Checkboxes</h2>
+<p>ช่อง <strong> ประเภทอินพุต = "ช่อง" </strong> กำหนดช่องทำเครื่องหมาย:</p>
+
+<form action="/action_page.php">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="dog">
+  <label for="vehicle1"> I have a dog</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="room">
+  <label for="vehicle3"> I have a room</label><br><br>
+  <input type="submit" value="ส่ง">
+</form> 
+
+<h2>2.HTML Form Attributes</h2>
+<p>เมื่อส่งแบบฟอร์มนี้ผลลัพธ์จะเปิดขึ้นในแท็บเบราว์เซอร์ใหม่:</p>
+
+<form action="/action_page.php" target="_blank">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="ณัฐพล"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="นามเกตุ"><br><br>
+  <input type="submit" value="ส่ง">
+</form> 
+
+<h2>2.1.The method Attribute</h2>
+
+<p>แบบฟอร์มนี้จะถูกส่งโดยใช้เมธอด GET:</p>
+
+<form action="/action_page.php" target="_blank" method="get">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="ณัฐพล"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="นามเกตุ"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+<p>
+หลังจากที่คุณส่งแล้วโปรดสังเกตว่าค่าแบบฟอร์มสามารถมองเห็นได้ในแถบที่อยู่ของแท็บเบราว์เซอร์ใหม่.</p>
+
+<p>2.2.แบบฟอร์มนี้จะถูกส่งโดยใช้วิธีการโพสต์ post:</p>
+
+<form action="/action_page.php" target="_blank" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="ณัฐพล"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="นามเกตุ"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<p>หลังจากที่คุณส่งแล้วโปรดสังเกตว่าไม่เหมือนกับวิธี GET ค่าแบบฟอร์มจะไม่ปรากฏในแถบที่อยู่ของแท็บเบราว์เซอร์ใหม่.</p>
+
+<h2>2.3.The form autocomplete attribute</h2>
+
+<p>กรอกและส่งแบบฟอร์มจากนั้นโหลดหน้านี้ใหม่เริ่มกรอกแบบฟอร์มอีกครั้งและดูว่าการเติมข้อความอัตโนมัติทำงานอย่างไร.</p>
+
+<p>จากนั้นลองตั้งค่าการเติมข้อความอัตโนมัติเป็น "ปิด".</p>
+
+<form action="/action_page.php" autocomplete="on">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email"><br><br>
+  <input type="submit">
+</form>
+
+<h2>3.The input Element</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<h2>3.1.The select Element</h2>
+
+<p>องค์ประกอบที่เลือกกำหนดรายการแบบเลื่อนลง:</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="lamborghini">Lamborghini</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+<h2>3.2.Pre-selected Option</h2>
+
+<p>คุณสามารถเลือกตัวเลือกล่วงหน้าด้วยแอตทริบิวต์ที่เลือก:</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat" selected>Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+<h2>3.3.Visible Option Values</h2>
+
+<p>ใช้แอตทริบิวต์ขนาดเพื่อระบุจำนวนค่าที่มองเห็นได้.</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="3">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+
+<h2>3.4.Allow Multiple Seletcions</h2>
+
+<p>ใช้แอตทริบิวต์หลายรายการเพื่ออนุญาตให้ผู้ใช้เลือกมากกว่าหนึ่งค่า.</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+
+<p>กดปุ่ม Ctrl (windows) / Command (Mac) ค้างไว้เพื่อเลือกหลายตัวเลือก.</p>
+
+<h2>3.5Textarea</h2>
+<p>องค์ประกอบ textarea กำหนดช่องป้อนข้อมูลหลายบรรทัด.</p>
+
+<form action="/action_page.php">
+  <textarea name="message" rows="10" cols="30">ฉันแค่อยากจิบน้ำลงคอที่แห้งผาก
+และในวันพรุ่งนี้ที่มีต้องมากกว่า
+แม้ว่ายังต้องเดินทางไปอีกเท่าไร
+แต่ฝันที่วาดเอาไว้คงจริงในไม่ช้า
+
+
+นาฬิกายังไม่หยุดทั้งวัน
+บอกตัวเองไม่มีทางหันหลัง
+เพื่อทุกสิ่งทุกอย่างที่ฉันหวัง
+จิบน้ำให้ชุ่มคอหน่อย บอกทุกคนให้รอหน่อย.</textarea>
+  <br><br>
+  <input type="submit">
+</form>
+
+<h2>3.6.Styling Textarea</h2>
+
+<p>ใช้ CSS เพื่อเปลี่ยนขนาดของพื้นที่ข้อความ:</p>
+
+<form action="/action_page.php">
+  <textarea name="message" style="width:200px; height:600px;">ไม่เคยลังเลหรืออาย ยังไง 
+i know its ok to cry ตั้งใจให้
+เพลงที่ระบาย ออกไป พอไหม Im gonna be alright
+ฉันจ่ายหนัก เพื่อความหวังทั้งหมดที่แบกไว้หลังไหล่ 
+เสียงในหัวมันแหกปาก บอกให้เลิกฝัน และขำใส่
+กับบางเรื่องที่ผิดหวัง ก็ไม่ได้หวั่น จะหวังใหม่
+ฉันแค่อยากพักจิบไวน์ ในวันที่โลก หันหลังใส่
+ชีวิตเหมือนพล็อต หนังตอนที่หัวเราะกัน ถูกล้อมด่า เต้นร้องรำ
+เวลาที่ท้อมา ไม่อาจจะร้องดังแต่พร้อมลา
+ข้างใน มันช็อคพัง แทบน็อคคา เพราะ วอดก้า ช็อตนั้น ครอบงำ 
+เวลาที่ทดท้อ กูรู้มีบทต่อ เกมยังไม่จบหรอก
+กับงานยอม อดนอน เพ่งจดจ่อ อารมณ์กลับจนตรอก
+ในวันที่หม่นหมอง ก็พร้อมชน ให้ช้ำบอบระบมต่อ
+ยังมีเพื่อนโอบกอด และตบปลอบ เช็ดเลือดที่หยดออก.</textarea>
+  <br>
+  <input type="submit">
+</form>
+
+<h2>3.7.The button Element</h2>
+
+<button type="button" onclick="alert('สุดยอดไปเลยครับ')">กดดู</button>
+
+<h2>3.8.Grouping Form Data with Fieldset</h2>
+
+<p>องค์ประกอบ fieldset ใช้เพื่อจัดกลุ่มข้อมูลที่เกี่ยวข้องในรูปแบบและองค์ประกอบคำอธิบายแผนภูมิกำหนดคำอธิบายภาพสำหรับองค์ประกอบ fieldset</p>
+
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="ณัฐพล"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="นามเกตุ"><br><br>
+    <input type="submit" value="ส่ง">
+  </fieldset>
+</form>
+
+<h2>3.9.The datalist Element</h2>
+
+<p>องค์ประกอบ datalist ระบุรายการของตัวเลือกที่กำหนดไว้ล่วงหน้าสำหรับองค์ประกอบอินพุต</p>
+
+<form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+
+<p><b>Note:</b> ไม่รองรับแท็กดาต้าลิสต์ใน Safari เวอร์ชันก่อนหน้า 12.1.</p>
+
+<h2>3.10.The output Element</h2>
+<p>องค์ประกอบผลลัพธ์แสดงถึงผลลัพธ์ของการคำนวณ</p>
+
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
+<p><strong>Note:</strong> องค์ประกอบเอาต์พุตไม่ได้รับการสนับสนุนใน Edge เวอร์ชันก่อนหน้า 13.</p>
+
+<h2>3.11.Text field</h2>
+<p>The <strong>input type="text"</strong> defines a one-line text input field:</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<h2>3.12.Password field</h2>
+
+<p>The <strong>input type="password"</strong> defines a password field:</p>
+
+<form action="/action_page.php">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<p>อักขระในช่องรหัสผ่านจะถูกปิดบัง (แสดงเป็นเครื่องหมายดอกจันหรือวงกลม).</p>
+
+<h2>3.13.Submit Button</h2>
+
+<p>The <strong>input type="submit"</strong> defines a button for submitting form data to a form-handler:</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="ณัฐพล"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="นามเกตุ"><br><br>
+  <input type="submit" value="ส่ง">
+</form> 
+
+<h2>3.14.Reset Button</h2>
+
+<p><strong> ประเภทอินพุต = "รีเซ็ต" </strong> กำหนดปุ่มรีเซ็ตที่รีเซ็ตค่าฟอร์มทั้งหมดเป็นค่าเริ่มต้น:</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="ณัฐพล"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="นามเกตุ"><br><br>
+  <input type="submit" value="ส่ง">
+  <input type="reset">
+</form> 
+
+<p>หากคุณเปลี่ยนค่าที่ป้อนแล้วคลิกปุ่ม "รีเซ็ต" ข้อมูลฟอร์มจะถูกรีเซ็ตเป็นค่าเริ่มต้น.</p>
+
+<h2>3.15.Show a Color Picker</h2>
+
+<p><strong> ประเภทอินพุต = "color" </strong> ใช้สำหรับช่องป้อนข้อมูลที่ควรมีสี</p>
+
+<form action="/action_page.php">
+  <label for="favcolor">เลือกสีที่คุณชื่นชอบ:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  <input type="submit" value="ส่ง">
+</form>
+
+<p><b>Note:</b>type = "color" ไม่รองรับใน Internet Explorer 11 หรือ Safari 9.1 (หรือรุ่นก่อนหน้า)</p>
+
+<h2>3.16.Date Field</h2>
+
+<p>
+<strong> ประเภทอินพุต = "วันที่" </strong> ใช้สำหรับช่องป้อนข้อมูลที่ควรมีวันที่</p>
+
+<form action="/action_page.php">
+  <label for="birthday">วันเกิด:</label>
+  <input type="date" id="birthday" name="birthday">
+  <input type="submit" value="ส่ง">
+</form>
+
+<p><strong>Note:</strong>ไม่รองรับใน Internet Explorer 11 หรือ Safari 9.1 (หรือรุ่นก่อนหน้า).</p>
+
+<h2>3.17.Date Field Restrictions</h2>
+
+<p>ใช้แอตทริบิวต์ต่ำสุดและสูงสุดเพื่อเพิ่มข้อ จำกัด ให้กับวันที่:</p>
+
+<form action="/action_page.php">
+  <label for="datemax">Enter a date before 1980-01-01:</label>
+  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+  <label for="datemin">Enter a date after 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+  
+  <input type="submit" value="ส่ง">
+</form>
+
+<p><strong>Note:</strong> type = "date" ไม่รองรับใน Safari หรือ Internet Explorer 11 (หรือรุ่นก่อนหน้า).</p>
+
+<h2>3.18.Local Date Field</h2>
+
+<p>The <strong>input type="datetime-local"</strong> ระบุช่องป้อนวันที่และเวลาโดยไม่มีเขตเวลา</p>
+
+<form action="/action_page.php">
+  <label for="birthdaytime">วันเกิด (วันและเวลา):</label>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+  <input type="submit" value="ส่ง">
+</form>
+
+<p><strong>Note:</strong> type = "date" ไม่รองรับใน Safari หรือ Internet Explorer 11 (หรือรุ่นก่อนหน้า).</p>
+
+
+<h2>3.19.Email Field</h2>
+
+<p>The <strong>input type="email"</strong> ใช้สำหรับช่องป้อนข้อมูลที่ควรมีที่อยู่อีเมล:</p>
+
+<form action="/action_page.php">
+  <label for="email">กรอกอีเมล์ของคุณ:</label>
+  <input type="email" id="email" name="email">
+  <input type="submit" value="ส่ง">
+</form>
+
+<h2>3.20.File upload</h2>
+
+<p>แสดงฟิลด์เลือกไฟล์ซึ่งอนุญาตให้เลือกไฟล์สำหรับอัปโหลด:</p>
+<form action="/action_page.php">
+  <label for="myfile">เลือกไฟล์:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<h2>3.21.Month Field</h2>
+
+<p>The <strong>input type="month"</strong> อนุญาตให้ผู้ใช้เลือกเดือนและปี</p>
+
+<form action="/action_page.php">
+  <label for="bdaymonth">วันเกิด(เดือนและปี):</label>
+  <input type="month" id="bdaymonth" name="bdaymonth">
+  <input type="submit" value="ส่ง">
+</form>
+
+<p><strong>Note:</strong> type = "month" ไม่รองรับใน Firefox, Safari หรือ Internet Explorer 11 (หรือรุ่นก่อนหน้า)</p>
+
+<h2>3.21.Number Field</h2>
+
+<p>The <strong>input type="number"</strong> กำหนดช่องป้อนตัวเลข.</p>
+
+<p>คุณสามารถใช้แอตทริบิวต์ต่ำสุดและสูงสุดเพื่อเพิ่มข้อ จำกัด ตัวเลขในช่องป้อนข้อมูล:</p>
+
+<form action="/action_page.php">
+  <label for="quantity">Quantity (between 1 and 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+  <input type="submit" value="Submit">
+</form>
+
+<h1>4.The input value attribute</h1>
+
+<p>แอตทริบิวต์ค่าระบุค่าเริ่มต้นสำหรับฟิลด์อินพุต:</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="ณัฐพล"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="นามเกตุ"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<h1>4.1.The input disabled attribute</h1>
+
+<p>แอตทริบิวต์ที่ปิดใช้งานระบุว่าควรปิดใช้งานช่องป้อนข้อมูล (ใช้ไม่ได้และคลิกไม่ได้):</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="ณัฐพล" disabled><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="นามเกตุ"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<h1>4.2.The input size attribute</h1>
+
+<p>แอตทริบิวต์ขนาดระบุความกว้าง (เป็นอักขระ) ของช่องป้อนข้อมูล:</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" size="50"><br>
+  <label for="pin">PIN:</label><br>
+  <input type="text" id="pin" name="pin" size="10"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+<h1>4.3.The input maxlength attribute</h1>
+
+<p>แอตทริบิวต์ maxlength ระบุจำนวนอักขระสูงสุดที่อนุญาตในช่องอินพุต:</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" size="50"><br>
+  <label for="pin">PIN:</label><br>
+  <input type="text" id="pin" name="pin" maxlength="4" size="4"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<h1>4.4.The input multiple attributes</h1>
+
+<p>แอตทริบิวต์หลายรายการระบุว่าผู้ใช้ได้รับอนุญาตให้ป้อนมากกว่าหนึ่งค่าในช่องป้อนข้อมูล.</p>
+
+<form action="/action_page.php">
+  <label for="files">Select files:</label>
+  <input type="file" id="files" name="files" multiple><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<p>ในการเลือกหลายไฟล์ให้กดแป้น CTRL หรือ SHIFT ค้างไว้ขณะเลือก</p>
+
+<h1>4.5.The input placeholder attribute</h1>
+
+<p>แอตทริบิวต์ตัวยึดระบุคำใบ้สั้น ๆ ที่อธิบายค่าที่คาดหวังของช่องป้อนข้อมูล.</p>
+
+<form action="/action_page.php">
+  <label for="phone">Enter a phone number:</label>
+  <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+<h1>4.6.The input required attribute</h1>
+
+<p>แอตทริบิวต์ที่จำเป็นระบุว่าต้องกรอกข้อมูลในช่องป้อนข้อมูลก่อนส่งแบบฟอร์ม</p>
+
+<form action="/action_page.php">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <input type="submit" value="ส่ง">
+</form>
+
+<h1>4.7.The input step attribute</h1>
+
+<p>แอ็ตทริบิวต์ step ระบุช่วงเวลาตามกฎหมายสำหรับองค์ประกอบอินพุต.</p>
+
+<form action="/action_page.php">
+  <label for="points">Points:</label>
+  <input type="number" id="points" name="points" step="3">
+  <input type="submit" value="ส่ง">
+</form>
+
+<h1>4.8.The input height and width attributes</h1>
+
+<p>แอตทริบิวต์ความสูงและความกว้างระบุความสูงและความกว้างขององค์ประกอบประเภทอินพุต = "รูปภาพ".</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+</form>
+
+<p><b>Note:</b> ประเภทอินพุต = "รูปภาพ" จะส่งพิกัด X และ Y ของการคลิกที่เปิดใช้งานปุ่มรูปภาพ.</p>
+
+<h1>4.9.The input list attribute</h1>
+
+<p>แอตทริบิวต์รายการหมายถึงองค์ประกอบดาต้าลิสต์ที่มีตัวเลือกที่กำหนดไว้ล่วงหน้าสำหรับองค์ประกอบอินพุต.</p>
+
+<form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit" value="ส่ง">
+</form>
+
+<h1>5.The input form attribute</h1>
+
+<p>แอตทริบิวต์ form ระบุรูปแบบที่องค์ประกอบอินพุตเป็นของ.</p>
+
+<form action="/action_page.php" id="form1">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="ส่ง">
+</form>
+
+
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname" form="form1">
+
+<h1>5.1.The input formaction attribute</h1>
+
+<p>แอตทริบิวต์ formaction ระบุ URL ของไฟล์ที่จะประมวลผลอินพุตเมื่อส่งแบบฟอร์ม.</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="ส่ง">
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+</form>
+
+<h1>5.2.The input formenctype attribute</h1>
+
+<p>แอตทริบิวต์ formenctype ระบุวิธีการเข้ารหัสข้อมูลแบบฟอร์มเมื่อส่ง.</p>
+
+<form action="/action_page_binary.asp" method="post">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="ส่ง">
+  <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+</form>
+
+<h1>5.3.The input formmethod Attribute</h1>
+
+<p>แอตทริบิวต์ formmethod กำหนดเมธอด HTTP สำหรับการส่งข้อมูลแบบฟอร์มไปยัง URL การดำเนินการ</p>
+
+<form action="/action_page.php" method="get" target="_blank">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit using GET">
+  <input type="submit" formmethod="post" value="Submit using POST">
+</form>
+
+<h1>5.4.The input formtarget attribute</h1>
+
+<p>แอตทริบิวต์ formtarget ระบุชื่อหรือคีย์เวิร์ดที่ระบุตำแหน่งที่จะแสดงการตอบกลับที่ได้รับหลังจากส่งแบบฟอร์ม.</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="ส่ง">
+  <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+  </form>
+ <h1>5.5.The input formnovalidate attribute</h1>
+
+<form action="/action_page.php">
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+  <input type="submit" value="ส่ง">
+  <input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+  
+  
+  
+
+</form>
+</body>
+</html>
